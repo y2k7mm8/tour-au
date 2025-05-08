@@ -1,81 +1,71 @@
-import React, { useState } from "react";
+import logo from "../assets/img/logo-slogan1.svg";
+import { useState } from "react";
 
-const Header = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const services = ["Визы", "Круизы"];
+const addresses = [
+  "51 Ridge Road: +61 412 345 678",
+  "13 Loris Way: +61 412 345 678",
+];
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+export default function Header() {
+  const [showServices, setShowServices] = useState(false);
+  const [showAddresses, setShowAddresses] = useState(false);
 
   return (
-    <header className="bg-blue-100 border-b border-blue-300">
+    <header className="bg-white border-b border-none">
       <div className="container mx-auto flex items-center justify-between py-2 px-4">
         <div className="flex items-center">
-          <img src="/path-to-logo.png" alt="Logo" className="h-10" />
+          <img src={logo} alt="Pegas Logo" className="h-10" />
         </div>
 
-        <nav className="hidden md:flex space-x-6">
-          <a href="#services" className="text-blue-700 hover:text-blue-900">
-            Наши услуги
-          </a>
-          <a href="#about" className="text-blue-700 hover:text-blue-900">
-            О компании
-          </a>
-          <a href="#contacts" className="text-blue-700 hover:text-blue-900">
-            Контакты
-          </a>
-        </nav>
-
-        <div className="hidden md:flex items-center space-x-4">
-          <div className="text-blue-700">
-            <span className="font-bold">+7 (495) 641-51-38</span>
-          </div>
-          <div className="relative">
-            <button
-              onClick={toggleDropdown}
-              className="text-blue-700 font-bold focus:outline-none"
-            >
-              Наш адрес
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-blue-300 rounded shadow-lg">
-                <ul className="py-2">
-                  <li className="px-4 py-2 hover:bg-blue-100">
-                    Сидней: 123 George St
-                  </li>
-                  <li className="px-4 py-2 hover:bg-blue-100">
-                    Мельбурн: 456 Collins St
-                  </li>
-                  <li className="px-4 py-2 hover:bg-blue-100">
-                    Брисбен: 789 Queen St
-                  </li>
-                </ul>
+        <nav className="flex items-center space-x-6">
+          <div
+            className="relative"
+            onMouseEnter={() => setShowServices(true)}
+            onMouseLeave={() => setShowServices(false)}
+          >
+            <button className="hover:text-blue-600">Наши услуги ▾</button>
+            {showServices && (
+              <div className="absolute top-full left-0 mt-2 w-40 bg-white border-none shadow-lg rounded-lg p-2 text-sm z-10">
+                {services.map((service, index) => (
+                  <div key={index} className="py-1 hover:bg-blue-100">
+                    {service}
+                  </div>
+                ))}
               </div>
             )}
           </div>
-        </div>
+          <button className="hover:text-blue-600">О компании</button>
+          <button className="hover:text-blue-600">Контакты</button>
+        </nav>
 
-        <div className="md:hidden">
-          <button className="text-blue-700 focus:outline-none">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-1">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
+              alt="Flag"
+              className="w-6"
+            />
+            <div
+              className="relative"
+              onMouseEnter={() => setShowAddresses(true)}
+              onMouseLeave={() => setShowAddresses(false)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
+              <button className="hover:text-blue-600">+61 412 345 678 ▾</button>
+              {showAddresses && (
+                <div className="absolute top-full right-0 mt-2 w-64 bg-white border shadow-lg rounded-lg p-2 text-sm z-10">
+                  {addresses.map((address, index) => (
+                    <div key={index} className="py-1 hover:bg-blue-100">
+                      {address}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+          <span className="text-gray-700">Наши адреса ▾</span>
         </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
