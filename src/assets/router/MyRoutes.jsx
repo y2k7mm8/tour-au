@@ -13,12 +13,13 @@ export const MyRoutes = () => {
   return (
     <div>
       <Header />
+      <Intro />
+
       <Routes>
         <Route
           path="/"
           element={
             <div>
-              <Intro />
               <Tour />
               <Reviews />
             </div>
