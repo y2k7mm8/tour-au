@@ -1,17 +1,11 @@
-import Header from "./components/Header";
-import { Intro } from "./components/Intro";
-import Tour from "./components/Tour";
-import { Reviews } from "./components/Reviews";
-import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
+import { MyRoutes } from "../src/assets/router/MyRoutes";
+
 function App() {
   return (
-    <>
-      <Header />
-      <Intro />
-      <Tour />
-      <Reviews />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <MyRoutes />
+    </BrowserRouter>
   );
 }
 

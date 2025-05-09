@@ -1,10 +1,13 @@
+// filepath: c:\Users\jesin\Desktop\fan projects\school\tour-au\src\components\Header.jsx
 import logo from "../assets/img/logo-slogan1.svg";
-import { BiLogoTelegram } from "react-icons/bi";
-import { BiLogoVk } from "react-icons/bi";
-import { BiLogoWhatsapp } from "react-icons/bi";
-import { BiLogoFacebook } from "react-icons/bi";
-
+import {
+  BiLogoTelegram,
+  BiLogoVk,
+  BiLogoWhatsapp,
+  BiLogoFacebook,
+} from "react-icons/bi";
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Добавлено
 
 const services = ["Визы", "Круизы"];
 const addresses = [
@@ -40,8 +43,14 @@ export default function Header() {
               </div>
             )}
           </div>
-          <button className="hover:text-blue-600">О компании</button>
-          <button className="hover:text-blue-600">Контакты</button>
+          <Link to="/About" className="hover:text-blue-600">
+            О компании
+          </Link>{" "}
+          {/* Ссылка на About */}
+          <Link to="/Contact" className="hover:text-blue-600">
+            Контакты
+          </Link>{" "}
+          {/* Ссылка на Contact */}
         </nav>
 
         <div className="flex items-center space-x-4">
