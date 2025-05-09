@@ -1,4 +1,9 @@
 import logo from "../assets/img/logo-slogan1.svg";
+import { BiLogoTelegram } from "react-icons/bi";
+import { BiLogoVk } from "react-icons/bi";
+import { BiLogoWhatsapp } from "react-icons/bi";
+import { BiLogoFacebook } from "react-icons/bi";
+
 import { useState } from "react";
 
 const services = ["Визы", "Круизы"];
@@ -40,6 +45,11 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
+          <BiLogoTelegram />
+          <BiLogoVk />
+          <BiLogoWhatsapp />
+          <BiLogoFacebook />
+
           <div className="flex items-center space-x-1">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
