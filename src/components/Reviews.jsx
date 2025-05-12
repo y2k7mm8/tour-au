@@ -2,112 +2,57 @@ import React from "react";
 
 export const Reviews = () => {
   return (
-    <>
-      <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="  mx-auto max-w-2xl md:text-center">
-          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            What Our Customers Are Saying
+    <section className="py-8 bg-slate-50">
+      <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-8">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
+            Отзывы наших клиентов
           </h2>
         </div>
         <ul
           role="list"
-          class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 md:gap-10 lg:max-w-none md:grid-cols-2 lg:grid-cols-3"
         >
-          <li>
-            <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
-              <li>
-                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                  <svg
-                    aria-hidden="true"
-                    width="105"
-                    height="78"
-                    class="absolute left-6 top-6 fill-slate-100"
-                  >
-                    <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z"></path>
-                  </svg>
-                  <blockquote class="relative">
-                    <p class="text-lg tracking-tight text-slate-900">
-                      I love the fitness apparel and gear I purchased from this
-                      site. The quality is exceptional and the prices are
-                      unbeatable.
-                    </p>
-                  </blockquote>
-                  <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
-                    <div>
-                      <div class="font-display text-base text-slate-900">
-                        Sheryl Berge
-                      </div>
-                    </div>
-                    <div class="overflow-hidden rounded-full bg-slate-50"></div>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
-              <li>
-                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                  <svg
-                    aria-hidden="true"
-                    width="105"
-                    height="78"
-                    class="absolute left-6 top-6 fill-slate-100"
-                  >
-                    <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z"></path>
-                  </svg>
-                  <blockquote class="relative">
-                    <p class="text-lg tracking-tight text-slate-900">
-                      As a professional athlete, I rely on high-performance gear
-                      for my training. This site offers a great selection of
-                      top-notch products.
-                    </p>
-                  </blockquote>
-                  <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
-                    <div>
-                      <div class="font-display text-base text-slate-900">
-                        Leland Kiehn
-                      </div>
-                    </div>
-                    <div class="overflow-hidden rounded-full bg-slate-50"></div>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
-              <li>
-                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                  <svg
-                    aria-hidden="true"
-                    width="105"
-                    height="78"
-                    class="absolute left-6 top-6 fill-slate-100"
-                  >
-                    <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z"></path>
-                  </svg>
-                  <blockquote class="relative">
-                    <p class="text-lg tracking-tight text-slate-900">
-                      The fitness apparel I bought here fits perfectly and feels
-                      amazing. I highly recommend this store to anyone looking
-                      for quality gear.
-                    </p>
-                  </blockquote>
-                  <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
-                    <div>
-                      <div class="font-display text-base text-slate-900">
-                        Peter Renolds
-                      </div>
-                    </div>
-                    <div class="overflow-hidden rounded-full bg-slate-50"></div>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </li>
+          {[
+            {
+              text: "Спасибо агентству за отличный отдых! Всё было организовано на высшем уровне, обязательно обратимся снова.",
+              name: "Анна Петрова",
+            },
+            {
+              text: "Очень понравился сервис и внимательность сотрудников. Помогли подобрать тур под наш бюджет и пожелания.",
+              name: "Игорь Смирнов",
+            },
+            {
+              text: "Путешествие прошло идеально! Документы оформили быстро, всё объяснили, поддерживали на связи.",
+              name: "Мария Кузнецова",
+            },
+          ].map((review, idx) => (
+            <li key={idx}>
+              <figure className="relative rounded-2xl bg-white p-5 sm:p-6 shadow-xl shadow-slate-900/10 h-full flex flex-col">
+                <svg
+                  aria-hidden="true"
+                  width="40"
+                  height="32"
+                  className="mb-2 fill-blue-100"
+                  viewBox="0 0 40 32"
+                >
+                  <path d="M10 32c-2.5 0-4.7-.6-6.6-2-1.9-1.4-3.3-3.3-4.4-5.8C-1.1 21.7-2 18.5-2 14.8c0-3.1.5-6.1 1.6-9 1.1-2.9 2.8-5.3 5-7.7C7.2-3.1 9.8-4.5 12.7-5.2L17.2 4.8c-3.3 1.3-6 3-8 5.1-1.9 2.1-2.9 3.9-2.9 5.4 0 .7.2 1.4.6 2 .5.7 1.4 1.5 2.9 2.3 2.1 1.2 3.5 2.5 4.3 3.9.8 1.3 1.3 2.8 1.3 4.5 0 2.6-1 4.7-2.9 6.3-1.9 1.6-4.2 2.4-7.1 2.4Zm20 0c-2.5 0-4.7-.6-6.6-2-1.9-1.4-3.3-3.3-4.4-5.8C18.9 21.7 18 18.5 18 14.8c0-3.1.5-6.1 1.6-9 1.1-2.9 2.8-5.3 5-7.7C27.2-3.1 29.8-4.5 32.7-5.2L37.2 4.8c-3.3 1.3-6 3-8 5.1-1.9 2.1-2.9 3.9-2.9 5.4 0 .7.2 1.4.6 2 .5.7 1.4 1.5 2.9 2.3 2.1 1.2 3.5 2.5 4.3 3.9.8 1.3 1.3 2.8 1.3 4.5 0 2.6-1 4.7-2.9 6.3-1.9 1.6-4.2 2.4-7.1 2.4Z" />
+                </svg>
+                <blockquote className="flex-1">
+                  <p className="text-base sm:text-lg tracking-tight text-slate-900">
+                    {review.text}
+                  </p>
+                </blockquote>
+                <figcaption className="mt-4 flex items-center border-t border-slate-100 pt-4">
+                  <div className="font-display text-sm sm:text-base text-slate-900 font-semibold">
+                    {review.name}
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
         </ul>
       </div>
-    </>
+    </section>
   );
 };

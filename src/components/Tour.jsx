@@ -3,21 +3,23 @@ import React from "react";
 const HotelCard = ({ image, name, location, price, isLarge }) => {
   return (
     <div
-      className={`${
-        isLarge ? "row-span-2 h-[33rem]" : "h-64"
-      } bg-cover bg-center rounded-lg relative`}
+      className={`relative bg-cover bg-center rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:scale-[1.03] ${
+        isLarge ? "md:row-span-2 md:h-[33rem] h-64" : "h-64"
+      }`}
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="absolute inset-0 bg-opacity-50 rounded-5xl"></div>
-      <div className="relative p-4 flex flex-col h-full">
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="relative p-4 flex flex-col h-full z-10">
         <div className="flex justify-end mb-2">
-          <span className="bg-blue-500 text-white px-2 py-1 rounded">
+          <span className="bg-blue-500 bg-opacity-90 text-white px-2 py-1 rounded text-xs sm:text-base">
             {price} сом
           </span>
         </div>
         <div className="flex flex-col justify-end mt-auto text-white">
-          <h3 className="text-lg font-semibold">{name}</h3>
-          <p className="text-sm text-gray-300">{location}</p>
+          <h3 className="text-base sm:text-lg font-semibold drop-shadow">
+            {name}
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-200">{location}</p>
         </div>
       </div>
     </div>
@@ -65,9 +67,11 @@ const Tour = () => {
   ];
 
   return (
-    <div className=" text-white min-h-screen">
-      <div className="container mx-auto p-4">
-        <h2 className="text-black text-2xl font-bold mb-4">Горячие туры</h2>
+    <section className="bg-white py-8">
+      <div className="container mx-auto px-2 sm:px-4">
+        <h2 className="text-black text-2xl sm:text-3xl font-bold mb-4 text-center">
+          Горячие туры
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {hotels.map((hotel, index) => (
             <HotelCard
@@ -81,7 +85,7 @@ const Tour = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
