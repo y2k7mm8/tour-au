@@ -32,7 +32,7 @@ export default function Header() {
             onMouseLeave={() => setShowServices(false)}
           >
             <button className="hover:text-blue-600 text-sm sm:text-base">
-              Наши услуги ▾
+              Наши услуги
             </button>
             {showServices && (
               <div className="absolute top-full left-0 mt-2 w-40 bg-white border-none shadow-lg rounded-lg p-2 text-sm z-10">
@@ -76,7 +76,7 @@ export default function Header() {
               onMouseLeave={() => setShowAddresses(false)}
             >
               <button className="hover:text-blue-600 text-xs sm:text-base">
-                +61 412 345 678 ▾
+                +61 412 345 678
               </button>
               {showAddresses && (
                 <div className="absolute top-full right-0 mt-2 w-48 sm:w-64 bg-white border shadow-lg rounded-lg p-2 text-xs sm:text-sm z-10">
@@ -93,7 +93,7 @@ export default function Header() {
             </div>
           </div>
           <span className="text-gray-700 text-xs sm:text-base whitespace-nowrap">
-            Наши адреса ▾
+            Наши адреса
           </span>
         </div>
       </div>
