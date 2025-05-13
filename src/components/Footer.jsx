@@ -3,7 +3,7 @@ import slogam from "../assets/img/logo-slogan1.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-6 text-gray-700 mt-10 border-t">
+    <footer className="bg-white py-3 text-gray-700 font-sans">
       <div className="container mx-auto flex flex-col gap-8 md:flex-row md:justify-between md:items-start px-4">
         <div className="mb-4 md:mb-0 flex flex-col items-start">
           <img src={slogam} alt="Pegas Touristik Logo" className="h-10" />
