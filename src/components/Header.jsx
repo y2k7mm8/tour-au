@@ -19,13 +19,17 @@ export default function Header() {
   const [showAddresses, setShowAddresses] = useState(false);
 
   return (
-    <header className="bg-white border-b border-none">
-      <div className="container mx-auto flex flex-wrap items-center justify-between py-2 px-2 sm:px-4 gap-y-2">
+    <header className="bg-gradient-to-r from-blue-50 border-b border-none shadow-sm">
+      <div className="container mx-auto flex flex-wrap items-center justify-between py-3 px-3 sm:px-6 gap-y-2">
         <div className="flex items-center mb-2 sm:mb-0">
-          <img src={logo} alt="Pegas Logo" className="h-8 sm:h-10" />
+          <img
+            src={logo}
+            alt="Pegas Logo"
+            className="h-10 sm:h-12 drop-shadow"
+          />
         </div>
 
-        <nav className="flex flex-col sm:flex-row items-center gap-2 sm:space-x-6 w-full sm:w-auto">
+        <nav className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6  w-full sm:w-auto">
           <div
             className="relative"
             onMouseEnter={() => setShowServices(true)}
@@ -59,16 +63,32 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2 sm:space-x-4 overflow-x-auto">
-          <BiLogoTelegram className="w-5 h-5 sm:w-6 sm:h-6" />
-          <BiLogoVk className="w-5 h-5 sm:w-6 sm:h-6" />
-          <BiLogoWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
-          <BiLogoFacebook className="w-5 h-5 sm:w-6 sm:h-6" />
+          <a
+            href="https://t.me/y2k7mm8"
+            target="_blank"
+            className="text-blue-500"
+          >
+            <BiLogoTelegram className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
+          <a href="https://vk.com/" target="_blank" className="text-blue-500">
+            <BiLogoVk className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
+          <a href="https://wa.me/" target="_blank" className="text-green-500">
+            <BiLogoWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
+          <a
+            href="https://facebook.com/"
+            target="_blank"
+            className="text-blue-500"
+          >
+            <BiLogoFacebook className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
 
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-2 ml-2">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
               alt="Flag"
-              className="w-5 sm:w-6"
+              className="w-5 sm:w-7 rounded shadow"
             />
             <div
               className="relative"
