@@ -2,10 +2,10 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div className="container mx-auto px-2 py-4 sm:px-4 sm:py-8">
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-8 bg-white p-3 sm:p-6 rounded-lg shadow-md">
+    <div className="container mx-auto px-2 py-8 sm:px-6">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-8 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-blue-100">
         <div>
-          <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+          <h2 className="text-lg sm:text-3xl font-extrabold mb-4 sm:mb-4 tracking-tight">
             Туристическое Агентство «КАМ АНД ФЛАЙ» - PEGAS Touristik
           </h2>
           <p className="text-gray-700 mb-2 sm:mb-4 text-sm sm:text-base">
@@ -27,7 +27,7 @@ export const About = () => {
         </div>
 
         <div>
-          <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+          <h2 className="text-lg sm:text-3xl font-extrabold mb-4 sm:mb-4 tracking-tight">
             ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КАМ АНД ФЛАЙ"
           </h2>
           <p className="text-gray-700 mb-2 sm:mb-4 text-sm sm:text-base">
